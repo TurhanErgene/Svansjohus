@@ -1,82 +1,99 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navbarItems = [
-    { label: "Home", link: "/" },
     {
-      label: "Services",
+      label: "Home",
       link: "/",
+    },
+    {
+      label: "Events",
+      link: "/events",
+    },
+    {
+      label: "Party",
+      link: "/party",
       dropdownItems: [
-        { label: "Web Design", link: "/" },
-        { label: "Graphic Design", link: "/" },
-        { label: "Marketing", link: "/" },
+        {
+          label: "Weddings",
+          link: "/events/weddings",
+        },
+        {
+          label: "Corporote Celebrations",
+          link: "/corporate-celebrations",
+        },
       ],
     },
-    { label: "About", link: "/" },
-    { label: "Contact", link: "/" },
+    {
+      label: "About",
+      link: "/about",
+    },
+    {
+      label: "Contact Us",
+      link: "/contact-us",
+    },
   ];
 
   return (
     <nav className="bg-gray-800">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <a href="/" className="flex-shrink-0">
+      {/* Desktop version */}
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="/">
               <img
-                className="h-8 w-8"
+                className="w-8 h-8"
                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                 alt="Workflow"
               />
             </a>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                {navbarItems.map((item) => (
-                  <div key={item.label}>
-                    <a
-                      href={item.link}
-                      className="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
-                    >
-                      {item.label}
-                    </a>
-                    {item.dropdownItems && (
-                      <div className="hidden absolute mt-1 w-56 rounded-md bg-white shadow-lg">
-                        {item.dropdownItems.map((dropdownItem) => (
-                          <a
-                            key={dropdownItem.label}
-                            href={dropdownItem.link}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            {dropdownItem.label}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+          </div>
+
+          {/* Navigation items */}
+          <div className="hidden md:block">
+            <div className="flex items-center justify-end md:flex-1">
+              {navbarItems.map((item) => (
+                <div key={item.label} className="relative">
+                  <a
+                    href={item.link}
+                    className="px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
+                  >
+                    {item.label}
+                  </a>
+                  {item.dropdownItems && (
+                    <div className="absolute top-full z-10 hidden py-1 bg-gray-800 rounded-md shadow-lg">
+                      {item.dropdownItems.map((dropdownItem) => (
+                        <a
+                          key={dropdownItem.label}
+                          href={dropdownItem.link}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white"
+                        >
+                          {dropdownItem.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
-            {/* Hamburger menu */}
+
+          {/* Hamburger menu */}
+          <div className="md:hidden">
             <motion.button
-              onClick={() => setIsOpen(!isOpen)}
-              animate={isOpen ? "open" : "closed"}
-              variants={{
-                open: { rotate: 90 },
-                closed: { rotate: 0 },
-              }}
+              initial={{ rotate: 0 }}
+              animate={isOpen ? { rotate: 90 } : { rotate: 0 }}
               transition={{ duration: 0.2 }}
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 transition duration-150 ease-in-out"
-              aria-label="Main menu"
-              aria-expanded="false"
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               {isOpen ? (
                 <svg
-                  className="block h-6 w-6"
+                  className="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -92,7 +109,7 @@ const Navbar = () => {
                 </svg>
               ) : (
                 <svg
-                  className="block h-6 w-6"
+                  className="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -112,29 +129,24 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Side menu */}
-      <motion.div
-        initial={{ x: "-100%" }}
-        animate={isOpen ? { x: 0 } : { x: "-100%" }}
-        transition={{ duration: 0.2 }}
-        className="md:hidden"
-      >
-        <div className="px-2 pt-2 pb-3 sm:px-3">
+      {/* Mobile version */}
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navbarItems.map((item) => (
-            <div key={item.label}>
+            <div key={item.label} className="relative">
               <a
                 href={item.link}
-                className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
+                className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-gray-700"
               >
                 {item.label}
               </a>
               {item.dropdownItems && (
-                <div className="ml-3 mt-1">
+                <div className="absolute top-full z-10 hidden py-1 bg-gray-800 rounded-md shadow-lg">
                   {item.dropdownItems.map((dropdownItem) => (
                     <a
                       key={dropdownItem.label}
                       href={dropdownItem.link}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                      className="block px-4 py-2 text-sm text-gray-300 hover:text-white"
                     >
                       {dropdownItem.label}
                     </a>
@@ -144,7 +156,7 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </nav>
   );
 };
