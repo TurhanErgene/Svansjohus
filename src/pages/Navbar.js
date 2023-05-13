@@ -37,6 +37,11 @@ const Navbar = () => {
     },
   ];
 
+  const navLinkVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <nav className="bg-gray-800">
       {/* Desktop version */}
@@ -55,12 +60,18 @@ const Navbar = () => {
 
           {/* Navigation items */}
           <div className="hidden md:block">
-            <div className="flex items-center justify-end md:flex-1">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={navLinkVariants}
+              transition={{ duration: 0.5 }}
+              className="flex items-center justify-end md:flex-1"
+            >
               {navbarItems.map((item) => (
                 <div key={item.label} className="relative">
                   <a
                     href={item.link}
-                    className="px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
+                    className="px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:rounded-xl"
                   >
                     {item.label}
                   </a>
@@ -79,7 +90,7 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           {/* Hamburger menu */}
