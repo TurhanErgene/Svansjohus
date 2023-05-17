@@ -65,7 +65,7 @@ const Navbar = () => {
               animate="visible"
               variants={navLinkVariants}
               transition={{ duration: 0.5 }}
-              className="flex items-center justify-end md:flex-1"
+              className="flex items-center justify-end md:flex-1 space-x-10"
             >
               {navbarItems.map((item) => (
                 <div key={item.label} className="relative">
