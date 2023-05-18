@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import pic1 from "../pictures/pic1.jpg";
-import pic2 from "../pictures/pic2.jpg";
+import pic5 from "../pictures/pic5.jpg";
 import pic3 from "../pictures/pic3.jpg";
 import pic4 from "../pictures/pic4.jpg";
 
-const pictures = [pic1, pic2, pic3, pic4];
+const pictures = [pic5, pic3, pic1, pic4];
 
 const Home = () => {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   const handleEmailClick = () => {
@@ -7,7 +8,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <motion.footer
+      className="bg-gray-900 text-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="max-w-screen-xl mx-auto p-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left">
@@ -29,13 +35,18 @@ const Footer = () => {
                 <a href="/contact" className="hover:text-gray-300">Contact</a>
               </li>
               <li>
-                <button onClick={handleEmailClick} className="hover:text-gray-300">Email</button>
+                <button
+                  onClick={handleEmailClick}
+                  className="hover:text-gray-300"
+                >
+                  Email
+                </button>
               </li>
             </ul>
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
