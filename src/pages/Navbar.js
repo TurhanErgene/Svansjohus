@@ -155,7 +155,7 @@ const Navbar = () => {
               >
                 {item.label}
               </a>
-              {item.dropdownItems && (
+              {/* {item.dropdownItems && (
                 <div className="absolute top-full z-10 hidden py-1 bg-gray-800 rounded-md shadow-lg">
                   {item.dropdownItems.map((dropdownItem) => (
                     <a
@@ -167,7 +167,7 @@ const Navbar = () => {
                     </a>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </div>
