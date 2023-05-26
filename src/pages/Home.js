@@ -33,7 +33,7 @@ const Home = () => {
             key={currentPictureIndex}
             src={pictures[currentPictureIndex]}
             alt="Landing Picture"
-            className="rounded-lg shadow-xl h-full max-w-full" //h-full
+            className="rounded-lg shadow-xl shadow-amber-900/40 h-full max-w-full" //h-full
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -51,7 +51,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h2 className="text-3xl font-semibold">Welcome to Our Website!</h2>
+            <h2 className="text-3xl font-semibold text-red-950 drop-shadow-xl">Välkommen till <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-amber-900 relative inline-block"><span className="relative text-white italic">Svansjöhus!</span></span></h2>
           </motion.div>
 
           <motion.div
@@ -60,9 +60,9 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <div className="bg-gray-100 p-4 rounded-lg w-4/5 mx-auto">
-              <h3 className="text-xl font-semibold py-2">Svenska</h3>
-              <p className="text-justify">
+            <div className="bg-gray-100 p-4 rounded-lg w-4/5 mx-auto shadow-lg shadow-amber-900/40 bg-opacity-80">
+              <h3 className="text-xl font-semibold py-2 text-red-950">Svenska</h3>
+              <p className="text-justify text-font">
                 Svansjöhus är beläget på en idyllisk plats i Skurup och omges av
                 vacker vild natur som bara återfinns i Skåne. Med 50 meter till
                 Svaneholms slott och 5 minuters gångavstånd till ett centrum med
@@ -73,9 +73,9 @@ const Home = () => {
                 oss.
               </p>
               <br />
-              <h4 className="float-left font-semibold">Detta erbjuder vi:</h4>
+              <h4 className="float-left font-semibold text-red-950">Detta erbjuder vi:</h4>
               <br />
-              <p className="text-justify">
+              <p className="text-justify text-font">
                 Gratis parkering 	&#40;10–12 bilar får plats&#41; 
                 Alkohol får medhavas i lokalen. Ta med den typ av dryck du vill konsumera vid
                 evenemanget. Dryck erbjuds inte på plats och eventarrangören
@@ -89,9 +89,9 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="bg-gray-100 p-4 rounded-lg w-4/5 mx-auto">
-              <h3 className="text-xl font-semibold py-2">Engelska</h3>
-              <p className="text-justify">
+            <div className="bg-gray-100 p-4 rounded-lg w-4/5 mx-auto shadow-lg shadow-amber-900/40 bg-opacity-80">
+              <h3 className="text-xl font-semibold py-2 text-red-950">Engelska</h3>
+              <p className="text-justify text-font">
                 Svansjöhus is nestled in an idyllic location in Skurup
                 surrounded by the beautiful wild natural beauty of southern
                 Sweden. Located 50 meters from the Svaneholm Slott and 5 mins
@@ -102,14 +102,14 @@ const Home = () => {
                 perfect to create memories.
               </p>
               <br />
-              <h4 className="float-left font-semibold">We offer:</h4>
+              <h4 className="float-left font-semibold text-red-950">We offer:</h4>
               <br />
-              <p className="text-justify">
+              <p className="text-justify text-font">
                 Free parking on the grounds for 10-12 cars. Free parking 50
                 meters away from the venue You can bring your own drinks. We do
                 not offer any You can bring your own food. We can also assist
                 you find a caterer If interested, please email{" "}
-                <span className="font-semibold text-blue-500 hover:text-blue-700 cursor-pointer">
+                <span className="font-semibold text-red-950 hover:text-orange-800 cursor-pointer">
                   info@nimantran.se
                 </span>
                 . including the below information Purpose of Event, Date, number

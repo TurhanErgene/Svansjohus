@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import logo1 from "../pictures/logo1.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,20 +13,6 @@ const Navbar = () => {
     {
       label: "Events",
       link: "/events",
-    },
-    {
-      label: "Party",
-      link: "/party",
-      dropdownItems: [
-        {
-          label: "Weddings",
-          link: "/events/weddings",
-        },
-        {
-          label: "Corporote Celebrations",
-          link: "/corporate-celebrations",
-        },
-      ],
     },
     {
       label: "About",
@@ -47,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800">
+    <nav className=" rounded-lg m-3">
       {/* Desktop version */}
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -55,8 +42,8 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <a href="/">
               <img
-                className="w-8 h-8"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                className="h-16 w-auto" //w-8 h-8
+                src={logo1}//"https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                 alt="Workflow"
               />
             </a>
@@ -72,10 +59,10 @@ const Navbar = () => {
               className="flex items-center justify-end md:flex-1 space-x-10"
             >
               {navbarItems.map((item) => (
-                <div key={item.label} className="relative">
+                <div key={item.label} className="relative ">
                   <a
                     href={item.link}
-                    className="px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:rounded-xl"
+                    className="p-4 text-sm font-medium text-font hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40 duration-100"
                   >
                     {item.label}
                   </a>
@@ -85,7 +72,7 @@ const Navbar = () => {
                         <a
                           key={dropdownItem.label}
                           href={dropdownItem.link}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white"
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-font"
                         >
                           {dropdownItem.label}
                         </a>
@@ -104,7 +91,7 @@ const Navbar = () => {
               animate={isOpen ? { rotate: 90 } : { rotate: 0 }}
               transition={{ duration: 0.2 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 text-amber-900 rounded-md hover:text-font  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-900"
             >
               {isOpen ? (
                 <svg
@@ -151,7 +138,7 @@ const Navbar = () => {
             <div key={item.label} className="relative">
               <a
                 href={item.link}
-                className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-gray-700"
+                className="block px-3 py-2 text-base font-medium text-font rounded-md"//hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40
               >
                 {item.label}
               </a>
