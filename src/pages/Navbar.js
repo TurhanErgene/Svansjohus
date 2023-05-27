@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import logo1 from "../pictures/logo1.png"
+import logo from "../pictures/logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,17 +34,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" rounded-lg m-3">
+    <nav className="rounded-lg m-3">
       {/* Desktop version */}
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 drop-shadow-lg shadow-amber-900/40">
             <a href="/">
               <img
-                className="h-16 w-auto" //w-8 h-8
-                src={logo1}//"https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                alt="Workflow"
+                className="h-60 mt-5 w-auto" //w-8 h-8
+                src={logo}//"https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                alt="logo"
               />
             </a>
           </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
                   >
                     {item.label}
                   </a>
-                  {item.dropdownItems && (
+                  {/* {item.dropdownItems && (
                     <div className="absolute top-full z-10 hidden py-1 bg-gray-800 rounded-md shadow-lg">
                       {item.dropdownItems.map((dropdownItem) => (
                         <a
@@ -78,7 +78,7 @@ const Navbar = () => {
                         </a>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </motion.div>
