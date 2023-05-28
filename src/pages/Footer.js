@@ -16,21 +16,22 @@ const Footer = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container px-4 pt-6">
-        <div className="flex space-x-3 justify-around gap-x-10"> {/* justify-around / between */}
+        <div className="flex space-x-3 justify-around gap-x-10 flex-col md:flex-row items-center">
+          {" "}
+          {/* justify-around / between */}
           {/*justify-center */}
           {/* Logo */}
-          <div className="flex">
+          <div className="">
             <a href="/">
               <img
-                className="h-16 w-auto md:16 " //w-8 h-8
-                src={logo1} //"https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                className="h-16 w-auto" //w-8 h-8
+                src={logo1}
                 alt="logo"
               />
             </a>
           </div>
-
           {/* Links */}
-          <div className="md:mt-4 md:pr-14">
+          <div className="mt-4 md:pr-14 pr-4">
             <a
               href="https://www.facebook.com/profile.php?id=100093119044524"
               type="button"
@@ -51,13 +52,13 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/svansjohus/"
               type="button"
-              class="m-1 h-9 w-9 rounded-full border-2 border-font uppercase leading-normal shadow-md text-font transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              className="m-1 h-9 w-9 rounded-full border-2 border-font uppercase leading-normal shadow-md text-font transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="mx-auto h-full w-4"
+                className="mx-auto h-full w-4"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -65,8 +66,10 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-
-          <button onClick={handleEmailClick} className="hover:text-gray-300 mt-3">
+          <button
+            onClick={handleEmailClick}
+            className="hover:text-gray-300 mt-3"
+          >
             <p className="flex items-center md:justify-start text-font drop-shadow-lg shadow-amber-800/40">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +80,7 @@ const Footer = () => {
                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
               </svg>
-              info@nimantran.se
+              <span className="md:pr-0 pr-3 font-semibold">info@nimantran.se</span>{/* hidden md:inline */}
             </p>
           </button>
         </div>

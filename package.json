@@ -12,10 +12,13 @@
     "framer-motion": "^10.12.10",
     "fs": "^0.0.1-security",
     "google-map-react": "^2.2.1",
+    "leaflet": "^1.9.4",
+    "leaflet-css": "^0.1.0",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.3.1",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

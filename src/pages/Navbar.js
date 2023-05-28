@@ -62,7 +62,7 @@ const Navbar = () => {
                 <div key={item.label} className="relative ">
                   <a
                     href={item.link}
-                    className="p-4 text-sm font-medium text-font hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40 duration-100"
+                    className="p-4 text-sm font-medium text-font hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40 duration-300"
                   >
                     {item.label}
                   </a>

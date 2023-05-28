@@ -43,7 +43,7 @@ const Contact = () => {
           <h2 className="text-font text-2xl font-semibold drop-shadow-lg">Email</h2>
           <p
             onClick={handleEmailClick}
-            className="text-font text-lg font-medium underline cursor-pointer drop-shadow-lg"
+            className="text-font text-lg font-medium underline cursor-pointer drop-shadow-lg hover:text-xl transition-all"
           >
             info@nimantran.se
           </p>
