@@ -11,8 +11,8 @@ const Navbar = () => {
       link: "/",
     },
     {
-      label: "Events",
-      link: "/events",
+      label: "Pricing",
+      link: "/Pricing",
     },
     {
       label: "About",
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <div key={item.label} className="relative ">
                   <a
                     href={item.link}
-                    className="p-4 text-sm font-medium text-font hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40 duration-300"
+                    className="p-4 text-md font-semibold drop-shadow-lg text-font hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40 duration-300"
                   >
                     {item.label}
                   </a>
@@ -138,7 +138,7 @@ const Navbar = () => {
             <div key={item.label} className="relative">
               <a
                 href={item.link}
-                className="block px-3 py-2 text-base font-medium text-font rounded-md"//hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40
+                className="block px-3 py-2 text-lg font-semibold drop-shadow-lg text-font rounded-md"//hover:rounded-2xl hover:shadow-md hover:shadow-amber-900/40
               >
                 {item.label}
               </a>

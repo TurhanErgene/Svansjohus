@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
-import Events from "./pages/Events";
+import Pricing from "./pages/Pricing";
 
 import Footer from "./pages/Footer";
 
@@ -17,7 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-           <Route exact path="/events" element={<Events />}/>
+           <Route exact path="/Pricing" element={<Pricing />}/>
            <Route exact path="/about" element={<About />}/>
 
            <Route exact path="/gallery" element={<Gallery />}/>
