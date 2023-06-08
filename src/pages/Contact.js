@@ -22,25 +22,32 @@ const Contact = () => {
             className="h-56 w-auto mt-4 mx-auto rounded-lg shadow-xl shadow-amber-900/40"
           ></img>
         </div>
+        <div className="mx-12">
+          <div className="my-16">
+            <h1 className="text-4xl font-bold text-red-900 drop-shadow-xl">
+              Contact us
+            </h1>
+            <p className="mt-4 text-font text-lg drop-shadow-lg ">
+              We are a local rental company dedicated to providing affordable
+              rentals to our community.
+            </p>
+          </div>
 
-        <div className="my-16">
-          <h1 className="text-4xl font-bold text-red-900 drop-shadow-xl">Contact us</h1>
-          <p className="mt-4 text-font text-lg drop-shadow-lg ">
-            We are a local rental company dedicated to providing affordable
-            rentals to our community.
-          </p>
+          <div className="my-20">
+            <h2 className="text-font text-2xl font-semibold drop-shadow-xl">
+              Our Address
+            </h2>
+            <p className="text-font text-lg font-normal drop-shadow-lg">
+              {" "}
+              Svaneholm 295, 274 91 Skurup, Skåne Län, Sweden
+            </p>
+          </div>
         </div>
 
         <div className="my-20">
-          <h2 className="text-font text-2xl font-semibold drop-shadow-xl">Our Address</h2>
-          <p className="text-font text-lg font-normal drop-shadow-lg">
-            {" "}
-            Svaneholm 295, 274 91 Skurup, Skåne Län, Sweden
-          </p>
-        </div>
-
-        <div className="my-20">
-          <h2 className="text-font text-2xl font-semibold drop-shadow-lg">Email</h2>
+          <h2 className="text-font text-2xl font-semibold drop-shadow-lg">
+            Email
+          </h2>
           <p
             onClick={handleEmailClick}
             className="text-font text-lg font-medium underline cursor-pointer drop-shadow-lg hover:text-xl transition-all"
@@ -50,7 +57,9 @@ const Contact = () => {
         </div>
 
         <div className="my-16">
-          <h2 className="text-font text-2xl font-semibold drop-shadow-lg">Telephone</h2>
+          <h2 className="text-font text-2xl font-semibold drop-shadow-lg">
+            Telephone
+          </h2>
           <p className="text-font text-lg font-normal underline drop-shadow-lg">
             +46 (0) 73-510 85 04
           </p>

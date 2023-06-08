@@ -18,7 +18,7 @@ const Pricing = () => {
       <div className="flex flex-col items-center justify-center">
         <div className="max-w-2xl">
           <div className="my-16 mx-10">
-            <h1 className="text-4xl font-bold text-red-900 drop-shadow-lg mb-14">
+            <h1 className="text-5xl font-bold text-red-900 drop-shadow-lg mb-20">
               Welcome to our stunning event venue!
             </h1>
             <p className="mt-4 text-font text-lg drop-shadow-lg">

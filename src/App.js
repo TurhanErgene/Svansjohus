@@ -1,13 +1,13 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./pages/Navbar";
+import Navbar from "./pages/Components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
-
-import Footer from "./pages/Footer";
+import Footer from "./pages/Components/Footer";
+import Chatbot from './Chatbot';
 
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
              {/*   <Route exact path="/" element={<Footer />}/>
               */}
         </Routes>
+        <Chatbot />
       </Router>
       <Footer />
     </div>

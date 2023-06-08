@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo1 from "../pictures/logo1.png";
+import logo1 from "../../pictures/logo1.png";
 
 const Footer = () => {
   const handleEmailClick = () => {

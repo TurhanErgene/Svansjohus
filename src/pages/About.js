@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Map from "./Map";
+import Map from "./Components/Map";
 
 const About = () => {
   return (

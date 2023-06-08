@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import logo from "../pictures/logo.png"
+import logo from "../../pictures/logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
