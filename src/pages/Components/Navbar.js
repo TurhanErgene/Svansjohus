@@ -23,6 +23,10 @@ const Navbar = () => {
       link: "/gallery",
     },
     {
+      label: "Events",
+      link: "/events",
+    },
+    {
       label: "Contact Us",
       link: "/contact-us",
     },

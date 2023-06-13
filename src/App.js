@@ -6,8 +6,9 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
+import Events from "./pages/Events";
+
 import Footer from "./pages/Components/Footer";
-import Chatbot from './Chatbot';
 
 
 function App() {
@@ -19,14 +20,13 @@ function App() {
           <Route exact path="/" element={<Home />} />
            <Route exact path="/Pricing" element={<Pricing />}/>
            <Route exact path="/about" element={<About />}/>
-
            <Route exact path="/gallery" element={<Gallery />}/>
+           <Route exact path="/events" element={<Events />}/>
            <Route exact path="/contact-us" element={<Contact />}/>
 
              {/*   <Route exact path="/" element={<Footer />}/>
               */}
         </Routes>
-        <Chatbot />
       </Router>
       <Footer />
     </div>
