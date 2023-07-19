@@ -132,7 +132,7 @@ const Events = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-x-24 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-x-8 md:gap-x-24 mt-8">
           <div>
             <h2 className="text-font text-xl font-semibold drop-shadow-xl mt-4 mb-2">
               Equipments and Services
