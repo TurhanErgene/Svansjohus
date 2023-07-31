@@ -24,7 +24,7 @@ const Pricing = () => {
             <p className="mt-4 text-font text-lg drop-shadow-lg">
               <div className="text-justify mb-1">
                 For a limited time, we are thrilled to offer our summer special!
-                Book your event before the end of August, and you'll enjoy an
+                Book your event before the end of August 2023, and you'll enjoy an
                 exclusive rate of just{" "}
               </div>
               <span className="text-2xl font-bold">8000 SEK per day</span>.{" "}

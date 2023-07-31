@@ -16,7 +16,7 @@ const About = () => {
           </h1>
           <p className="mt-4 text-font text-lg drop-shadow-lg w-4/6 md:w-2/6 mb-6">
             Svansjöhus is nestled in an idyllic location in Skurup surrounded by
-            the beautiful wild natural beauty of southern Sweden. Located 50
+            the beautiful wild natural beauty of southern Sweden. Located 500
             meters from the Svaneholm Slott and 5 mins distance from a shopping
             center, it is a perfect location for all kinds of social events. The
             hall itself can seat around 100 persons. Well equipped with all the

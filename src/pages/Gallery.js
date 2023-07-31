@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import pic1 from "../pictures/pic1.jpg";
-import pic2 from "../pictures/pic2.jpg";
 import pic3 from "../pictures/pic3.jpg";
 import pic4 from "../pictures/pic4.jpg";
 import pic5 from "../pictures/pic5.jpg";
@@ -16,9 +15,19 @@ import pic13 from "../pictures/pic13.jpg";
 import pic14 from "../pictures/pic14.jpg";
 import pic15 from "../pictures/pic15.jpg";
 import pic16 from "../pictures/pic16.jpg";
+import pic19 from "../pictures/pic19.jpg";
+import pic20 from "../pictures/pic20.jpg";
+import pic21 from "../pictures/pic21.jpg";
+import pic22 from "../pictures/pic22.jpg";
+import pic23 from "../pictures/pic23.jpg";
 
 const pictures = [
+  pic21,
+  pic20,
+  pic22,
+  pic23,
   pic1,
+  pic19,
   pic16,
   pic3,
   pic4,
@@ -33,7 +42,6 @@ const pictures = [
   pic13,
   pic14,
   pic15,
-  pic2,
 ];
 
 const PicturePage = () => {

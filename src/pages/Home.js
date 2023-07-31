@@ -60,69 +60,40 @@ const Home = () => {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-1 mt-8 ml-auto mr-auto mb-4"
+            className="mt-8 ml-auto mr-auto mb-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <div className="bg-gray-100 p-6 rounded-lg w-4/5 mx-auto shadow-lg shadow-amber-900/40 bg-opacity-80 pb-10">
+            <div className="bg-gray-100 p-6 rounded-lg md:w-3/5 w-4/5 mx-auto shadow-lg shadow-amber-900/40 bg-opacity-80 px-6 md:px-12 pb-8 md:pb-12">
               <h3 className="text-xl font-semibold py-2 text-red-950">
-                English
-              </h3>
-
-              <h4 className="float-left font-semibold text-red-950">
-                We offer:
-              </h4>
-              <br />
-              <ul className="list-disc list-inside text-justify text-font mt-2">
-                <li>Free parking on the grounds for 10-12 cars</li>
-                <li>Free parking 50 meters away from the venue</li>
-                <li>You can bring your own drinks. We do not offer any.</li>
-                <li>
-                  You can bring your own food. We can also assist you in finding
-                  a caterer.
-                </li>
-                <br/>
-                <div>
-                  
-                  If interested, please email{" "}
-                  <span className="font-semibold text-red-950 hover:text-orange-800 cursor-pointer underline">
-                    info@nimantran.se
-                  </span>{" "}
-                  including the below information:
-                  <ul className="list-disc list-inside">
-                    <li>Purpose of Event</li>
-                    <li>Date</li>
-                    <li>Number of people</li>
-                    <li>Any special requirements</li>
-                  </ul>
-                </div>
-              </ul>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-lg w-4/5 mx-auto shadow-lg shadow-amber-900/40 bg-opacity-80">
-              <h3 className="text-xl font-semibold py-2 text-red-950">
-                Svenska
-              </h3>
-
-              <h4 className="float-left font-semibold text-red-950">
                 Detta erbjuder vi:
-              </h4>
+              </h3>
               <br />
               <ul className="list-disc list-inside text-justify text-font mt-2">
                 <li>Gratis parkering (10–12 bilar får plats)</li>
-                <br/>
+                <br />
                 <li>
                   Alkohol får medhavas i lokalen. Ta med den typ av dryck du
                   vill konsumera vid evenemanget. Dryck erbjuds inte på plats
                   och eventarrangören erbjuder inte hjälp med beställning av
                   dryck, men gärna med annat.
                 </li>
-                <br/>
+                <br />
                 <li>
                   Fri matplanering: Ta med eller beställ den typ av mat du vill
                   konsumera vid evenemanget. Mattjänster erbjuds inte på plats,
                   men eventarrangören erbjuder gärna sina tjänster för att
                   organisera detta å era vägnar.
+                </li>
+                <br />
+                <li>För flera bilar finns gratis parkering 500 meter bort.</li>
+                <br />
+                <li className="font-medium">
+                  Om intresserad mejla{" "}
+                  <span className="font-semibold text-red-950 hover:text-orange-800 cursor-pointer underline">
+                    info@nimantran.se
+                  </span>
                 </li>
               </ul>
             </div>
