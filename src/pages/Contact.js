@@ -19,7 +19,7 @@ const Contact = () => {
           <img
             alt="home"
             src={home}
-            className="h-56 w-auto mt-4 mx-auto rounded-lg shadow-xl shadow-amber-900/40"
+            className="md:h-60 h-36 w-auto mt-4 mx-auto rounded-lg shadow-xl shadow-amber-900/40 " //h-full max-w-full
           ></img>
         </div>
         <div className="mx-12">

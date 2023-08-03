@@ -6,19 +6,24 @@ function Map() {
 
   return (
     <div className="drop-shadow-lg shadow-amber-900/10">
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '56vh', width: '100%' }}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          Svaneholm 295, 274 91 Skurup <br/> Skåne Län, Sweden
-        </Popup>
-      </Marker>
-    </MapContainer>
+      <MapContainer
+        className=""
+        center={position}
+        zoom={13}
+        scrollWheelZoom={false}
+        style={{ height: "56vh", width: "100%" }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>
+            Svaneholm 295, 274 91 Skurup <br /> Skåne Län, Sweden
+          </Popup>
+        </Marker>
+      </MapContainer>
     </div>
-    
   );
 }
 

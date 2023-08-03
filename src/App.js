@@ -10,7 +10,6 @@ import Events from "./pages/Events";
 
 import Footer from "./pages/Components/Footer";
 
-
 function App() {
   return (
     <div className="App">
@@ -18,17 +17,17 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-           <Route exact path="/Pricing" element={<Pricing />}/>
-           <Route exact path="/about" element={<About />}/>
-           <Route exact path="/gallery" element={<Gallery />}/>
-           <Route exact path="/events" element={<Events />}/>
-           <Route exact path="/contact-us" element={<Contact />}/>
+          <Route exact path="/Pricing" element={<Pricing />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/gallery" element={<Gallery />} />
+          <Route exact path="/events" element={<Events />} />
+          <Route exact path="/contact-us" element={<Contact />} />
 
-             {/*   <Route exact path="/" element={<Footer />}/>
-              */}
+          {/*   <Route exact path="/" element={<Footer />}/>
+           */}
         </Routes>
+        <Footer/>
       </Router>
-      <Footer />
     </div>
   );
 }

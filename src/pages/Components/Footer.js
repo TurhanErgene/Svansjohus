@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import logo1 from "../../pictures/logo1.png";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
   const handleEmailClick = () => {
     const email = "info@nimantran.se";
     window.location.href = `mailto:${email}`;
@@ -16,13 +19,15 @@ const Footer = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container pt-6">
+        <div
+          className={`container ${
+            location.pathname === "/about" ? "mt-20" : "mt-6"
+          }`}
+        >
           <div className="flex flex-col items-center md:flex-row md:justify-around space-x-3 gap-x-10">
             {" "}
-            {/* justify-around / between */}
-            {/*justify-center */}
             {/* Logo */}
-            <div className="">
+            <div>
               <a href="/">
                 <img
                   className="h-16 w-auto" //w-8 h-8
@@ -32,41 +37,56 @@ const Footer = () => {
               </a>
             </div>
             {/* Links */}
-            <div className="mt-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=100093119044524"
-                type="button"
-                className="mx-1 h-9 w-9 rounded-full border-2 border-font uppercase leading-normal shadow-md text-font transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 "
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="mx-auto h-full w-4 "
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+            <div className="mt-4 md:pr-12 pr-2">
+              {/* Facebook Logo */}
+              <div className="inline-block transform transition-transform hover:scale-110">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100092854124676"
+                  type="button"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
                 >
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                </svg>
-              </a>
-
-              <a
-                href="https://www.instagram.com/svansjohus/"
-                type="button"
-                className="mx-1 h-9 w-9 rounded-full border-2 border-font uppercase leading-normal shadow-md text-font transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="mx-auto h-full w-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="46"
+                    height="46"
+                    viewBox="0 0 50 50"
+                  >
+                    <path
+                      className=""
+                      fill="#7f1d1d"
+                      d="M 24 4 C 12.972066 4 4 12.972074 4 24 C 4 35.027926 12.972066 44 24 44 C 35.027934 44 44 35.027926 44 24 C 44 12.972074 35.027934 4 24 4 z M 24 7 C 33.406615 7 41 14.593391 41 24 C 41 32.380773 34.967178 39.306373 27 40.720703 L 27 29 L 30.625 29 C 31.129 29 31.555188 28.623047 31.617188 28.123047 L 31.992188 25.123047 C 32.028188 24.839047 31.938047 24.553891 31.748047 24.337891 C 31.559047 24.122891 31.287 24 31 24 L 27 24 L 27 20.5 C 27 19.397 27.897 18.5 29 18.5 L 31 18.5 C 31.552 18.5 32 18.053 32 17.5 L 32 14.125 C 32 13.607 31.604844 13.174906 31.089844 13.128906 C 31.030844 13.123906 29.619984 13 27.833984 13 C 23.426984 13 21 15.616187 21 20.367188 L 21 24 L 17 24 C 16.448 24 16 24.447 16 25 L 16 28 C 16 28.553 16.448 29 17 29 L 21 29 L 21 40.720703 C 13.032822 39.306373 7 32.380773 7 24 C 7 14.593391 14.593385 7 24 7 z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              {/* Instagram Logo */}
+              <div className="inline-block transform transition-transform hover:scale-110">
+                <a
+                  href="https://www.instagram.com/svansjohus/"
+                  type="button"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
                 >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="46"
+                    height="46"
+                    viewBox="0 0 50 50"
+                  >
+                    <path
+                      fill="#7f1d1d"
+                      d="M 16.5 5 C 10.16639 5 5 10.16639 5 16.5 L 5 31.5 C 5 37.832757 10.166209 43 16.5 43 L 31.5 43 C 37.832938 43 43 37.832938 43 31.5 L 43 16.5 C 43 10.166209 37.832757 5 31.5 5 L 16.5 5 z M 16.5 8 L 31.5 8 C 36.211243 8 40 11.787791 40 16.5 L 40 31.5 C 40 36.211062 36.211062 40 31.5 40 L 16.5 40 C 11.787791 40 8 36.211243 8 31.5 L 8 16.5 C 8 11.78761 11.78761 8 16.5 8 z M 34 12 C 32.895 12 32 12.895 32 14 C 32 15.105 32.895 16 34 16 C 35.105 16 36 15.105 36 14 C 36 12.895 35.105 12 34 12 z M 24 14 C 18.495178 14 14 18.495178 14 24 C 14 29.504822 18.495178 34 24 34 C 29.504822 34 34 29.504822 34 24 C 34 18.495178 29.504822 14 24 14 z M 24 17 C 27.883178 17 31 20.116822 31 24 C 31 27.883178 27.883178 31 24 31 C 20.116822 31 17 27.883178 17 24 C 17 20.116822 20.116822 17 24 17 z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
+            {/* Email */}
             <button
               onClick={handleEmailClick}
               className="hover:text-gray-300 mt-3"
@@ -90,6 +110,7 @@ const Footer = () => {
           </div>
         </div>
       </motion.footer>
+
       <div className="text-center text-xs mb-2 text-font">
         © 2023 Copyright:
         <a
