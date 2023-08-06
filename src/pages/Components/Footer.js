@@ -21,7 +21,7 @@ const Footer = () => {
       >
         <div
           className={`container ${
-            location.pathname === "/about" ? "mt-20" : "mt-6"
+            location.pathname === "/about" ? "md:mt-20 mt-10 2560:mt-112" : "mt-6"
           }`}
         >
           <div className="flex flex-col items-center md:flex-row md:justify-around space-x-3 gap-x-10">

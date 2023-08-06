@@ -12,16 +12,16 @@ const About = () => {
       >
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold text-red-900 drop-shadow-xl mt-6 mb-2">
-            About us
+            Om oss
           </h1>
           <p className="mt-4 text-font text-lg drop-shadow-lg w-4/6 md:w-2/6 mb-6">
-            Svansjöhus is nestled in an idyllic location in Skurup surrounded by
-            the beautiful wild natural beauty of southern Sweden. Located 500
-            meters from the Svaneholm Slott and 5 mins distance from a shopping
-            center, it is a perfect location for all kinds of social events. The
-            hall itself can seat around 100 persons. Well equipped with all the
-            amenities and an event manager who can tailor make your needs, this
-            tranquil place is perfect to create memories.
+            Svansjöhus ligger inbäddat i ett idylliskt läge i Skurup omgivet av
+            den vackra vilda naturen i södra Sverige. Beläget 500 meter från
+            Svaneholms Slott och 5 minuters avstånd från ett köpcentrum. Det är
+            ett perfekt läge för alla typer av sociala evenemang. Själva salen
+            har plats för cirka 100 personer. Den är välutrustad med alla
+            bekvämligheter och en evenemangschef som kan skräddarsy dina behov,
+            denna lugna plats är perfekt för att skapa minnen.
           </p>
         </div>
       </motion.div>

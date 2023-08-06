@@ -9,7 +9,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -25,17 +25,17 @@ const Contact = () => {
         <div className="mx-12">
           <div className="my-16">
             <h1 className="text-4xl font-bold text-red-900 drop-shadow-xl">
-              Contact us
+              Kontakta oss
             </h1>
             <p className="mt-4 text-font text-lg drop-shadow-lg ">
-              We are a local rental company dedicated to providing affordable
-              rentals to our community.
+              Vi är ett lokalt uthyrningsföretag som är dedikerade till att
+              tillhandahålla prisvärd lokalhyra till vårt samhälle.
             </p>
           </div>
 
           <div className="my-20">
             <h2 className="text-font text-2xl font-semibold drop-shadow-xl">
-              Our Address
+              Vår adress
             </h2>
             <p className="text-font text-lg font-normal drop-shadow-lg">
               {" "}
@@ -48,17 +48,16 @@ const Contact = () => {
           <h2 className="text-font text-2xl font-semibold drop-shadow-lg">
             Email
           </h2>
-          <p
-            onClick={handleEmailClick}
-            className="text-font text-lg font-medium underline cursor-pointer drop-shadow-lg hover:text-xl transition-all"
-          >
-            info@nimantran.se
+          <p onClick={handleEmailClick}>
+            <span className="text-font text-lg font-medium underline cursor-pointer drop-shadow-lg hover:text-xl transition-all">
+              info@nimantran.se
+            </span>
           </p>
         </div>
 
         <div className="my-16">
           <h2 className="text-font text-2xl font-semibold drop-shadow-lg">
-            Telephone
+            Telefon
           </h2>
           <p className="text-font text-lg font-normal underline drop-shadow-lg">
             +46 (0) 73-510 85 04

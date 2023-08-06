@@ -5,6 +5,11 @@ import { useNavigate } from "react-router-dom";
 const Pricing = () => {
   const navigate = useNavigate();
 
+  const handleEmailClick = () => {
+    const email = "info@nimantran.se";
+    window.location.href = `mailto:${email}`;
+  };
+
   const handleContactClick = () => {
     navigate("/contact-us");
   };
@@ -19,28 +24,28 @@ const Pricing = () => {
         <div className="max-w-2xl">
           <div className="my-16 mx-10">
             <h1 className="text-5xl font-bold text-red-900 drop-shadow-lg mb-20">
-              Welcome to our stunning event venue!
+              Välkommen till vår fantastiska eventlokal!{" "}
             </h1>
             <p className="mt-4 text-font text-lg drop-shadow-lg">
               <div className="text-justify mb-1">
-                For a limited time, we are thrilled to offer our summer special!
-                Book your event before the end of August 2023, and you'll enjoy an
-                exclusive rate of just{" "}
+                Under en begränsad tid är vi stolta över att kunna erbjuda vår
+                sommarspecial! Boka ditt evenemang före slutet av augusti, och
+                du kommer få det exklusiva priser på heldagshyra för{" "}
               </div>
-              <span className="text-2xl font-bold">8000 SEK per day</span>.{" "}
+              <span className="text-2xl font-bold">10 000 per dag.</span>.{" "}
               <br />
               <br />
               <div className="text-justify my-2 drop-shadow-md">
-                Our regular rate for a full day's rental is{" "}
-                <span className="line-through">10000 SEK</span>, so you can see
-                the exceptional value this summer deal presents. Don't miss out
-                on this chance to secure your preferred date and enjoy
-                significant savings.
+                Vårt ordinarie pris på en heldagshyra är{" "}
+                <span className="line-through">12 500 kr</span>, så du kan se
+                det exceptionella värdet som detta sommarerbjudande presenterar.
+                Missa inte denna chans att säkra ditt föredragna datum och njuta
+                av betydande besparingar.
               </div>
               <div className="text-justify my-16 drop-shadow-md">
-                This incredible offer provides you with the perfect opportunity
-                to seize the moment and plan your memorable gathering at an
-                unbeatable price.
+                Detta otroliga erbjudande ger dig det perfekta tillfället att
+                fånga ögonblicket och planera din minnesvärda sammankomst till
+                ett oslagbart pris.
               </div>
             </p>
           </div>
@@ -48,16 +53,26 @@ const Pricing = () => {
             onClick={handleContactClick}
             className="h-16 mb-6 text-4xl font-bold drop-shadow-lg hover:drop-shadow-lg text-font transform hover:-rotate-2 hover:rounded-2xl hover:shadow-amber-900/40 duration-300 cursor-pointer hover:text-5xl transition-all"
           >
-            Contact Us!
+            Kontakta oss!
           </button>
           <div className="my-10 mx-12 mb-24 ">
             <h2 className="text-font my-2 text-2xl font-bold drop-shadow-lg">
-              Pricing
+              Prisförslag
             </h2>
             <p className="text-font text-lg font-normal drop-shadow-md text-justify">
-              Interested in hosting your event at our venue? Contact us with the
-              details for the kind of event you are planning and the number of
-              guests, and we can provide you with a personalized price quote.
+              Intresserad av att hålla ett evenemang hos oss men behöver lite
+              hjälp att anordna det? Kontakta oss på{" "}
+              <button
+                onClick={handleEmailClick}
+                className="font-semibold"
+              >
+                <span >
+                  <p className="font-medium underline hover:text-orange-800">info@nimantran.se</p>
+                </span>
+              </button>{" "}
+              med detaljer för vilken typ av evenemang du planerar, antal gäster
+              och vad du vill ha hjälp med att anordna, så kan vi ge dig ett
+              personligt prisförslag.
             </p>
           </div>
         </div>

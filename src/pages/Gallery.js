@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import pic1 from "../pictures/pic1.jpg";
 import pic3 from "../pictures/pic3.jpg";
@@ -46,7 +46,7 @@ const pictures = [
 
 const PicturePage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPicture, setSelectedPicture] = useState("");
+  const [selectedPicture, setSelectedPicture] = useState(null);
 
   const openPicture = (picture) => {
     setIsOpen(true);
@@ -55,8 +55,10 @@ const PicturePage = () => {
 
   const closePicture = () => {
     setIsOpen(false);
-    setSelectedPicture("");
+    setSelectedPicture(null);
   };
+
+  const LazyImage = lazy(() => selectedPicture);
 
   return (
     <motion.div
@@ -75,6 +77,7 @@ const PicturePage = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
             onClick={() => openPicture(picture)}
+            loading="lazy" // Lazy load the images
           />
         ))}
 
@@ -83,11 +86,12 @@ const PicturePage = () => {
             className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 "
             onClick={closePicture}
           >
-            <img
-              src={selectedPicture}
-              alt="Local pictures"
-              className="max-w-full max-h-full"
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyImage
+                alt="Local pictures"
+                className="max-w-full max-h-full"
+              />
+            </Suspense>
           </div>
         )}
       </div>

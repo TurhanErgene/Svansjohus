@@ -7,19 +7,19 @@ const Navbar = () => {
 
   const navbarItems = [
     {
-      label: "Home",
+      label: "Hem",
       link: "/",
     },
     {
-      label: "Pricing",
+      label: "Priser",
       link: "/Pricing",
     },
     {
-      label: "About",
+      label: "Om oss",
       link: "/about",
     },
     {
-      label: "Gallery",
+      label: "Bilder",
       link: "/gallery",
     },
     {
@@ -27,7 +27,7 @@ const Navbar = () => {
       link: "/events",
     },
     {
-      label: "Contact Us",
+      label: "Kontakta oss",
       link: "/contact-us",
     },
   ];

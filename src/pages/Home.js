@@ -11,6 +11,11 @@ const pictures = [pic5, pic1, pic4, pic3];
 const Home = () => {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
 
+  const handleEmailClick = () => {
+    const email = "info@nimantran.se";
+    window.location.href = `mailto:${email}`;
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPictureIndex((prevIndex) => (prevIndex + 1) % pictures.length);
@@ -52,7 +57,7 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <h2 className="text-3xl font-semibold text-red-950 drop-shadow-xl">
-              Welcome to{" "}
+              Välkommen till{" "}
               <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-red-950 relative inline-block">
                 <span className="relative text-white italic">Svansjöhus!</span>
               </span>
@@ -66,35 +71,48 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <div className="bg-gray-100 p-6 rounded-lg md:w-3/5 w-4/5 mx-auto shadow-lg shadow-amber-900/40 bg-opacity-80 px-6 md:px-12 pb-8 md:pb-12">
-              <h3 className="text-xl font-semibold py-2 text-red-950">
+              <h3 className="text-2xl font-semibold py-2 text-red-950">
                 Detta erbjuder vi:
               </h3>
               <br />
               <ul className="list-disc list-inside text-justify text-font mt-2">
-                <li>Gratis parkering (10–12 bilar får plats)</li>
+                <li>Gratis parkering för 10–12 bilar utanför lokalen.</li>
                 <br />
                 <li>
-                  Alkohol får medhavas i lokalen. Ta med den typ av dryck du
-                  vill konsumera vid evenemanget. Dryck erbjuds inte på plats
-                  och eventarrangören erbjuder inte hjälp med beställning av
-                  dryck, men gärna med annat.
+                  För fler bilar finns gratis parkering 500m bort från lokalen.
                 </li>
                 <br />
                 <li>
-                  Fri matplanering: Ta med eller beställ den typ av mat du vill
-                  konsumera vid evenemanget. Mattjänster erbjuds inte på plats,
-                  men eventarrangören erbjuder gärna sina tjänster för att
-                  organisera detta å era vägnar.
+                  Dryck medtagets själv och erbjuds inte på plats, egen medhav
+                  alkohol är tillåten. Vi kan inte erbjuda hjälp med beställning
+                  av dryck, men gärna med annat.
                 </li>
                 <br />
-                <li>För flera bilar finns gratis parkering 500 meter bort.</li>
+                <li>
+                  Fri matplanering: Ta med, beställ eller anordna catering av
+                  den typ av mat ni önskar konsumera vid evenemanget.
+                  Matserveringen erbjuds inte på plats, men vi erbjuder gärna
+                  tjänsten att organisera cateringen mot era önskemål.
+                </li>
                 <br />
                 <li className="font-medium">
-                  Om intresserad mejla{" "}
-                  <span className="font-semibold text-red-950 hover:text-orange-800 cursor-pointer underline">
-                    info@nimantran.se
-                  </span>
+                  Vid intresse skicka ett mejl till{" "}
+                  <button
+                onClick={handleEmailClick}
+                className="font-semibold"
+              >
+                <span >
+                  <p className="font-medium underline hover:text-orange-800">info@nimantran.se</p>
+                </span>
+              </button>{" "}
+                  med följande information:
                 </li>
+                <ul className="pl-5 list-disc list-inside">
+                  <li className="mt-2">Vilken typ av evenemang du planerar</li>
+                  <li>Antal personer</li>
+                  <li>Några önskemål</li>
+                  <li>Datum</li>
+                </ul>
               </ul>
             </div>
           </motion.div>

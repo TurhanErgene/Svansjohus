@@ -12,7 +12,7 @@ import Footer from "./pages/Components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App min-h-screen">
       <Router>
         <Navbar />
         <Routes>
@@ -22,9 +22,6 @@ function App() {
           <Route exact path="/gallery" element={<Gallery />} />
           <Route exact path="/events" element={<Events />} />
           <Route exact path="/contact-us" element={<Contact />} />
-
-          {/*   <Route exact path="/" element={<Footer />}/>
-           */}
         </Routes>
         <Footer/>
       </Router>

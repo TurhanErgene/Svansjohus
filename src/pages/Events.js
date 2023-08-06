@@ -16,37 +16,37 @@ const Events = () => {
     >
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-red-900 drop-shadow-xl mt-6 mb-2">
-          Meeting and Events
+          Möten och Events
         </h1>
         <h2 className="text-font text-2xl font-semibold drop-shadow-xl pt-4">
-          Host a corporate wellness retreat!
+          Håll en hälsoretreat för företag!{" "}
         </h2>
 
         <h2 className="text-font text-2xl font-semibold drop-shadow-xl pt-14 mb-4">
-          Room Set-up Examples:{" "}
+          Exempel på rumskonfiguration:{" "}
         </h2>
 
         <div className="flex flex-col items-center my-6">
           <h3 className="text-font text-xl font-semibold drop-shadow-xl">
-            Banquet
+            Bankett
           </h3>
           <p className="text-font text-lg drop-shadow-lg items-center w-4/6 md:w-2/6 ">
-            Generally used for meals and sessions involving small group
-            discussions. A five-foot round table seats eight people comfortably.
-            A six-foot round table seats ten people comfortably.
+            Används vanligtvis för måltider och sessioner med små
+            gruppdiskussioner. Bäst lämpat med runda bord, storleken anpassat
+            efter antal vid bordet.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div className="flex flex-col items-center">
             <h3 className="text-font text-xl font-semibold drop-shadow-xl">
-              Conference and Hollow Square
+              Konferens – fyrkantigt bord
             </h3>
             <p className="text-font text-lg drop-shadow-lg items-center w-4/6">
-              Appropriate for interactive discussions and note-taking sessions
-              for fewer than 25 people. Many hotels have elegant "boardrooms"
-              for 10 to 20 people, equipped with full audiovisual capabilities,
-              a writing board, cork board, and a flip chart.
+              Lämplig för interaktiva diskussioner och anteckningssessioner för
+              färre än 25 personer. Bygg upp det som ett styrelserum med full
+              audiovisuell kapacitet, en skrivtavla, anslagstavla och ett
+              blädderblock.
             </p>
             <img
               alt="square"
@@ -56,12 +56,13 @@ const Events = () => {
           </div>
           <div className="flex flex-col items-center">
             <h3 className="text-font text-xl font-semibold drop-shadow-xl">
-              E-Shape, U-Shape and T-Shape
+              E-, U- och T-formad
             </h3>
             <p className="text-font text-lg drop-shadow-lg items-center w-4/6">
-              Appropriate for groups of fewer than 40 people. These are best for
-              interaction with a leader seated at the head of the setup.
-              Audiovisual is usually best set up at the open end of the seating.
+              Lämplig för grupper på färre än 40 personer. Dessa är bäst för
+              interaktion med en ledare som sitter i spetsen av uppställningen.
+              Audiovisuell är vanligtvis bäst placerad i den öppna änden av
+              uppställningen.
             </p>
             <img
               alt="shaped"
@@ -71,13 +72,13 @@ const Events = () => {
           </div>
           <div className="flex flex-col items-center">
             <h3 className="text-font text-xl font-semibold drop-shadow-xl">
-              Theater
+            Teater
             </h3>
             <p className="text-font text-lg drop-shadow-lg items-center w-4/6">
-              Appropriate for large sessions and short lectures that do not
-              require extensive note-taking. This is a convenient setup to use
-              before breaking into discussion or role-playing groups because
-              chairs can be moved.
+            Lämplig för stora sessioner och kortare föreläsningar, som inte kräver omfattande anteckningar.
+Detta är en bekväm inställning att använda innan du går in i diskussions- eller rollspelsgrupper
+
+eftersom stolarna kan flyttas.
             </p>
             <img
               alt="theater"
@@ -87,12 +88,11 @@ const Events = () => {
           </div>
           <div className="flex flex-col items-center">
             <h3 className="text-font text-xl font-semibold drop-shadow-xl">
-              Reception
+            Mottagning
             </h3>
             <p className="text-font text-lg drop-shadow-lg items-center w-4/6">
-              Stand-up social function where beverages and light foods are
-              served. Foods may be presented on small buffet tables or passed by
-              servers. May precede a meal function.
+            Stående tillställning där drycker och lättare mat serveras. Livsmedel kan presenteras på små
+buffébord eller serveras av serveringspersonal. Kan föregå som en måltidsfunktion.
             </p>
             <img
               alt="reception"
@@ -102,12 +102,11 @@ const Events = () => {
           </div>
           <div className="flex flex-col items-center">
             <h3 className="text-font text-xl font-semibold drop-shadow-xl">
-              Schoolroom or Classroom
+            Skolsal eller klassrum
             </h3>
             <p className="text-font text-lg drop-shadow-lg items-center w-4/6">
-              The most desirable setup for medium to large-size lectures.
-              Requires a relatively large room. Tables provide attendees with
-              space for spreading out materials and taking notes.
+            Den mest önskvärda inställningen för medelstora till stora föreläsningar. Kräver ett relativt stort
+rum. Borden ger deltagarna utrymme för att sprida ut material och ta anteckningar.
             </p>
             <img
               alt="classroom"
@@ -117,12 +116,11 @@ const Events = () => {
           </div>
           <div className="flex flex-col items-center">
             <h3 className="text-font text-xl font-semibold drop-shadow-xl">
-              Ovals and Rounds
+            Ovala- och rundabord
             </h3>
             <p className="text-font text-lg drop-shadow-lg items-center w-4/6">
-              Generally used for meals and sessions involving small group
-              discussions. A five foot round table seats eight people
-              comfortably. A six foot round table seats 10 people comfortably.
+            Användas vanligtvis för måltider och sessioner med små gruppdiskussioner.
+Bäst lämpat med runda- eller ovala bord, storleken anpassat efter antal vid bordet.
             </p>
             <img
               alt="rounds"
@@ -132,29 +130,24 @@ const Events = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-x-8 md:gap-x-24 mt-8">
+        <div className="mt-8">
           <div>
             <h2 className="text-font text-xl font-semibold drop-shadow-xl mt-4 mb-2">
-              Equipments and Services
+            Utrustning och tjänster
             </h2>
             <ul className="mb-8 text-font text-lg drop-shadow-lg items-center">
-              <li>Audio-Visual Equipment</li>
-              <li>Teleconferencing</li>
-              <li>Videoconferencing</li>
-              <li>Wireless Internet</li>
+              <li>Audiovisuell utrustning</li>
+              <li>Telefonkonferens</li>
+              <li>Videokonferens</li>
+              <li>Trådlöst internet</li>
+              <li>Datorer</li>
+              <li>Kopieringsmaskin</li>
+              <li>Skrivare</li>
+              
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-font text-xl font-semibold drop-shadow-xl mt-4 mb-2">
-              Business Services
-            </h2>
-            <ul className="mb-8 text-font text-lg drop-shadow-lg items-center">
-              <li>Computers</li>
-              <li>Copy Service</li>
-              <li>Printers</li>
-            </ul>
-          </div>
+          
         </div>
       </div>
     </motion.div>
